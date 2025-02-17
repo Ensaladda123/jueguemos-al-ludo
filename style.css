@@ -1,0 +1,50 @@
+body {
+    background-color: black;
+    color: #00ff00;
+    font-family: monospace;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.matrix {
+    position: absolute;
+    font-size: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.falling {
+    animation: fall 0.5s linear infinite;
+}
+@keyframes fall {
+    0% {
+        top: -100px;
+        opacity: 0.1;
+    }
+    100% {
+        top: 100%;
+        opacity: 1;
+    }
+}
+#message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0;
+    animation: showMessage 1s ease-in forwards;
+    animation-delay: 5s;
+}
+@keyframes showMessage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
